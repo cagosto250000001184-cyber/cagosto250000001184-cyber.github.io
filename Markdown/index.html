@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Markdown → HTML</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>md → html</h1>
+
+    <div class="grid">
+      <div class="pane accent-md">
+        <div class="pane-top"></div>
+        <div class="pane-head">
+          <span class="label">MARKDOWN</span>
+          <span class="badge">input</span>
+        </div>
+        <textarea id="markdown-input" placeholder="# A heading&#10;&#10;Some **bold** and _italic_ text.&#10;&#10;> a quote&#10;&#10;[a link](https://example.com)"></textarea>
+      </div>
+
+      <div class="pane accent-out">
+        <div class="pane-top"></div>
+        <div class="pane-head">
+          <span class="label">RAW HTML</span>
+          <span class="badge">output</span>
+        </div>
+        <div id="html-output" class="output"><span class="empty-hint">Tags will appear here…</span></div>
+      </div>
+
+      <div class="pane accent-out">
+        <div class="pane-top"></div>
+        <div class="pane-head">
+          <span class="label">PREVIEW</span>
+          <span class="badge">rendered</span>
+        </div>
+        <div id="preview" class="preview"><span class="empty-hint">Rendered result will appear here…</span></div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="stats">
+        <span id="stat-lines">0 lines</span>
+        <span id="stat-words">0 words</span>
+        <span id="stat-chars">0 chars</span>
+      </span>
+      <span class="legend"># heading · &gt; quote · **bold** · *italic* · [link](url) · ![img](url)</span>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
